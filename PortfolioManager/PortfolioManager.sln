@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.26228.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioManager", "PortfolioManager\PortfolioManager.csproj", "{FF9ECD55-8291-4BC4-9FAD-453E67490E3C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{A7561BE5-A92D-47F1-A3D4-4DBF4A421522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PM.DataContracts", "PM.BusinessLogic\PM.DataContracts.csproj", "{8043A88A-221E-4FBA-8A4E-D4F71EB443C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PM.DataLayer", "PM.DataLayer\PM.DataLayer.csproj", "{7DAF792A-3280-497C-861B-6B96F11A2EB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PM.BusinessLayer", "PM.BusinessLayer\PM.BusinessLayer.csproj", "{A7929989-D2F4-410D-AD42-92BDF70B1664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PM.UtilityClasses", "..\..\..\PortfolioManager\PortfolioManager\PM.UtilityClasses\PM.UtilityClasses.csproj", "{F6BEAD5D-35C9-48E7-81E6-3E60AE2A6669}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +25,27 @@ Global
 		{FF9ECD55-8291-4BC4-9FAD-453E67490E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF9ECD55-8291-4BC4-9FAD-453E67490E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF9ECD55-8291-4BC4-9FAD-453E67490E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8043A88A-221E-4FBA-8A4E-D4F71EB443C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8043A88A-221E-4FBA-8A4E-D4F71EB443C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8043A88A-221E-4FBA-8A4E-D4F71EB443C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8043A88A-221E-4FBA-8A4E-D4F71EB443C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DAF792A-3280-497C-861B-6B96F11A2EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DAF792A-3280-497C-861B-6B96F11A2EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DAF792A-3280-497C-861B-6B96F11A2EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DAF792A-3280-497C-861B-6B96F11A2EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7929989-D2F4-410D-AD42-92BDF70B1664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7929989-D2F4-410D-AD42-92BDF70B1664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7929989-D2F4-410D-AD42-92BDF70B1664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7929989-D2F4-410D-AD42-92BDF70B1664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6BEAD5D-35C9-48E7-81E6-3E60AE2A6669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BEAD5D-35C9-48E7-81E6-3E60AE2A6669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BEAD5D-35C9-48E7-81E6-3E60AE2A6669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BEAD5D-35C9-48E7-81E6-3E60AE2A6669}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8043A88A-221E-4FBA-8A4E-D4F71EB443C2} = {A7561BE5-A92D-47F1-A3D4-4DBF4A421522}
 	EndGlobalSection
 EndGlobal
