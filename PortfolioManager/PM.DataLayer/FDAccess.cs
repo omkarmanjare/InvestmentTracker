@@ -46,23 +46,29 @@ namespace PM.DataLayer
         }
 
 
-        //public static object GetFD()
-        //{
-        //    // var fd=null;
+        public static SearchFDResponse SearchFD(string searchKey)
+        {
+            var dataAccess = GenericDataAccess.GetDatabase();
+            var mongoCollection = GetMongoDBCollection<FixedDeposite>.GetDatabaseCollection(dataAccess, "FixedDeposits");
 
-        //    var database = mongoClient.GetDatabase("PortfolioManagement");
-        //    var collection = database.GetCollection<FixedDeposite>("FixedDeposites");
-        //    try
-        //    {
 
-        //        var fd = collection.Find(x => x.FdId == "ALLVDM101").FirstOrDefault();
-        //        return fd;
-        //    }
+            var fds = mongoCollection.Find(x => x.FdId == searchKey).ToList();
+            if (fds == null)
+                throw new MongoDBDataAccessException("Exception while sarching FD");           
+            
+            List<FixedDeposite> ListFDs = new List<FixedDeposite>();
+            if (fds.Capacity > 0)
+            {
+                foreach(FixedDeposite fd in fds )
+                {
+                    ListFDs.Add(fd);
+                }
+            }
 
-        //    catch
-        //    {
-        //        throw new Exception("Excetpion while inserting FD");
-        //    }
-        //}
+            return new SearchFDResponse()
+            {
+                ListOfFDs = ListFDs
+            };
+        }
     }
 }

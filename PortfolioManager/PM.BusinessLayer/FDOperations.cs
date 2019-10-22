@@ -21,8 +21,6 @@ namespace PM.BusinessLayer
             {
                 try
                 {
-                    //FixedDeposite Object = 
-
                     response = FDAccess.Insert(new FixedDeposite()
                     {
                         Amount = requestModel.Amount,
@@ -30,14 +28,14 @@ namespace PM.BusinessLayer
                         FIName = requestModel.FIName,
                         InterestRate = requestModel.InterestRate,
                         MaturityAmount = requestModel.MaturityAmount,
+                        StartDate = requestModel.StartDate,
+                        NameOfOwner = requestModel.NameOfOwner,
                         MaturityDate = requestModel.MaturityDate,
-                        NameOfHolder = requestModel.NameOfHolder,
+                        NameOfHolder = requestModel.NameOfFirstHolder,
                         NameOfNominee = requestModel.NameOfNominee,
                         FdId = requestModel.FdId
                     });
 
-
-                    //response = FDAccess.Insert();
                 }
 
                 catch (Exception ex)
@@ -51,19 +49,9 @@ namespace PM.BusinessLayer
             }
             return response;
         }
-        public List<SearchFDResponse> GetFD()
+        public SearchFDResponse SearchFD(string searchKey)
         {
-            //var mapper = Mapper.Map<FixedDeposite>(requestModel);
-
-            //var fdGet = FDAccess.GetFD();
-
-            //Call to databse operations and
-            return new List<SearchFDResponse>();
-            // throw new NotImplementedException();
+           return  FDAccess.SearchFD(searchKey);           
         }
-
-
-
-
     }
 }

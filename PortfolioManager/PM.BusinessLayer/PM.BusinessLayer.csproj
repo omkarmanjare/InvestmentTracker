@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FDOperations.cs" />
+    <Compile Include="Interfaces\CalculatePayments.cs" />
     <Compile Include="Interfaces\IFDOperations.cs" />
     <Compile Include="Interfaces\IPMOperations.cs" />
     <Compile Include="Interfaces\IUserOperations.cs" />

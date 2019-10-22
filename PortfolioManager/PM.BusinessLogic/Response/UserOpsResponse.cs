@@ -30,5 +30,10 @@ namespace PM.DataContracts.Response
         [DataMember]
         public string AuthenticationToken { get; set; }
 
+        //public AuthenticateUserResponse()
+        //{
+        //    IsUserAuthenticated = false;
+        //}
+
     }
 }

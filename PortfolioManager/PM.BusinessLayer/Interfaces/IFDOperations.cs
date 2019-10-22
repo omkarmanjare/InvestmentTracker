@@ -11,10 +11,8 @@ namespace PM.BusinessLayer.Interfaces
 {
     public interface IFDOperations : IPMOperations
     {
-        CreateFdResponse CreateFd(CreateFDRequest createFdRequest);
-
-        //
-        List<SearchFDResponse> GetFD();
+        CreateFdResponse CreateFd(CreateFDRequest createFdRequest); 
+        SearchFDResponse SearchFD(string searchKey);
 
     }
 }

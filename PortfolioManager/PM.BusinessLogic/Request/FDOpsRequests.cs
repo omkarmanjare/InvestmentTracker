@@ -17,9 +17,11 @@ namespace PM.DataContracts
         public string FdId { get; set; }
         public double Amount { get; set; }
         public string FIName { get; set; }
-        public string NameOfHolder { get; set; }
+        public string NameOfFirstHolder { get; set; }
         public string NameOfNominee { get; set; }
+        public string NameOfOwner { get; set; }
         public DateTime DateFoCreation { get; set; }
+        public DateTime StartDate { get; set; }
         public DateTime MaturityDate { get; set; }
         public double MaturityAmount { get; set; }
         public double InterestRate { get; set; }
@@ -28,13 +30,13 @@ namespace PM.DataContracts
 
     public class SearchFDRequest
     {
-        public object searchKey { get; set; }
+        public string searchKey { get; set; }
     }
+   
+    public  class CloseFDRequest {
 
 
-    public class SearchFDResponse
-    {
-        public List<FixedDeposite> searchResult { get; set; }
     }
+    public class CloseRDResponse { }
 
 }

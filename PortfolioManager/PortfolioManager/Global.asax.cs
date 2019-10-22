@@ -32,8 +32,6 @@ namespace PortfolioManager
             // builder.RegisterType<PMOperations>().As<IPMOperations>().InstancePerRequest();
 
             // builder.RegisterAdapter
-
-
             var container = builder.Build();//what it does
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
 
